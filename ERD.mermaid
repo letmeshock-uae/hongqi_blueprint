@@ -1,0 +1,14 @@
+erDiagram
+    CAR_MODEL ||--o{ VARIANT : "has"
+    CAR_MODEL ||--o{ COLOR : "available_in"
+    CAR_MODEL ||--o{ MEDIA : "contains"
+    VARIANT ||--o{ SPECIFICATION : "defined_by"
+    
+    INQUIRY }o--|| CAR_MODEL : "interested_in"
+    INQUIRY }o--|| DEALER : "assigned_to"
+
+    CAR_MODEL {
+        string id PK
+        string name
+        string base_price
+    }
